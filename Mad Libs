@@ -1,0 +1,41 @@
+""" 
+This program prompts you to write a word,
+which then goes into the blank spaces in the story text.
+
+Author: Ida
+"""
+
+print "Mad Libs is starting..."
+name = raw_input("Write your name: ")
+
+#User to input 3 adjectives
+first_adj = raw_input("Write an adjective: ")
+second_adj = raw_input("Write a second adjective: ")
+third_adj = raw_input("Write a thrid adjective: ")
+
+#User to input 3 verbs 
+first_verb = raw_input("Enter a verb: ")
+second_verb = raw_input("Enter a next verb: ")
+third_verb = raw_input("Enter one more verb: ")
+
+#User to input 4 nouns
+first_noun = raw_input("Enter a noun: ")
+second_noun = raw_input("Enter a second noun: ")
+thrid_noun = raw_input("Enter a thrid noun: ")
+fourth_noun = raw_input("Enter a fourth noun: ")
+
+#User to input answers
+print "Now, what is your favourite..? "
+animal = raw_input("Animal: ")
+food = raw_input("Food: ")
+fruit = raw_input("Fruit: ")
+number = raw_input("Number: ")
+superhero_name = raw_input("Superhero name: ")
+country = raw_input("Country: ")
+dessert = raw_input("Dessert: ")
+year = raw_input("Year: ")
+
+#The template for the story
+STORY = "This morning I woke up and felt %s because %s was going to finally %s over the big %s %s. On the other side of the %s were many %ss protesting to keep %s in stores. The crowd began to %s to the rythym of the %s, which made all of the %ss very %s. %s tried to %s into the sewers and found %s rats. Needing help, %s quickly called %s. %s appeared and saved %s by flying to %s and dropping %s into a puddle of %s. %s then fell asleep and woke up in the year %s, in a world where %ss ruled the world."
+
+print STORY % (first_adj, name, first_verb, second_adj, first_noun, second_noun, animal, food, second_verb, thrid_noun, fruit, third_adj, name, third_verb, number, name, superhero_name, superhero_name, name, country, name, dessert, name, year, fourth_noun)
