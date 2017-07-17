@@ -15,20 +15,28 @@ print "The calculator is starting..."
 print "Current time: %s/%s/%s %s:%s" % (now.month, now.day, now.year, now.hour, now.minute)
 sleep(1) 
 hint = "Don't forget to include the correct units! \nExiting..."
-option = raw_input("Enter C for Circle or T for Triangle:")
+option = raw_input("Enter C for Circle or T for Triangle, S for Square:")
 option = option.upper()
+# Now checking if user wants to calculate area of a Circle
 if option == "C":
     radius = float(raw_input("Enter radius: "))
     area = pi * radius**2
     print "The pie is baking..."
     sleep(1)
     print ("Area: %.2f. \n%s" % (area, hint))
-# Now checking if user wants to calculate area of Triangle
+# Now checking if user wants to calculate area of a Triangle
 elif option == "T":
     base = float(raw_input("Enter base: "))
     height = float(raw_input("Enter height: "))
     area = (0.5)*base*height
     print "Uni Bi Tri..."
+    sleep(1)
+    print ("Area: %.2f. \n%s" % (area, hint))
+# Now checking if user wants to calculate area of a Square    
+elif option == "S":
+    base = float(raw_input("Enter base: "))
+    area = base*base
+    print "Uno momento"
     sleep(1)
     print ("Area: %.2f. \n%s" % (area, hint))
 else:
