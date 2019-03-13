@@ -1,2 +1,2 @@
 # learning-to-code
-Small projects as part of my learning curve.
+Small projects in Python as part of my learning curve.
