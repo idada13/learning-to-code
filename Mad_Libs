@@ -2,7 +2,7 @@
 This program prompts you to write a word,
 which then goes into the blank spaces in the story text.
 
-Author: Ida
+Author: Ida by codecademy.com
 """
 
 print "Mad Libs is starting..."
