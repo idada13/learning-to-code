@@ -1,2 +1,2 @@
 # learning-to-code
-Projects completed on codecademy.com
+Small projects as part of my learning curve.
