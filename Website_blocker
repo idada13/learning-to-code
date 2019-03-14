@@ -1,0 +1,38 @@
+import time
+
+#importing datetime class (dt) from datetime module
+
+from datetime import datetime as dt
+
+hosts_temp="hosts"
+hosts_path=r"C:\Windows\System32\drivers\etc\hosts"
+redirect="127.0.0.1"
+website_list=["www.facebook.com", "facebook.com", "www.olx.pl", "olx.pl", "gazeta.pl", "www.gazeta.pl"]
+
+# adding time when the blocker works
+# checking the time condition
+# adjusting the host file with the visiual features and function to delete added websites when outside of working hours
+
+while True:
+    if dt(dt.now().year, dt.now().month, dt.now().day, 9) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
+        print("Working hours...")
+        with open(hosts_path, 'r+') as file:
+            content=file.read()
+            for website in website_list:
+                if website in content:
+                    pass
+                else:
+                    file.write(redirect+ " "+ website+"\n")
+    else:
+        with open(hosts_path, 'r+') as file:
+            content=file.readlines()
+            file.seek(0)
+            for line in content:
+                if not any(website in line for website in website_list):
+                    file.write(line)
+            file.truncate()
+        print("Time-wasting hours...")
+    time.sleep(5)
+
+
+## Schedule the task in Task Scheduler - Harmonogram Zadan.
